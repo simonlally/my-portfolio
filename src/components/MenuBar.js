@@ -3,15 +3,22 @@ import "semantic-ui-css/semantic.min.css";
 import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-export default function MenuBar() {
-  function handleClick() {}
+const menuItems = [
+  { key: "portfolio", name: "Portfolio" },
+  { key: "contact", name: "Contact" },
+  { key: "resume", name: "Resume" }
+];
 
-  return (
-    <Menu pointing secondary>
-      <Menu.Item name="Portfolio" as={Link} to="/" />
-      <Menu.Menu position="right">
-        <Menu.Item name="Resume" as={Link} to="/resume" />
-      </Menu.Menu>
-    </Menu>
-  );
+export default function MenuBar() {
+  return <Menu items={menuItems} />;
+}
+
+{
+  /* <Menu>
+<Menu.Item name="Portfolio" as={Link} to="/" />
+
+<Menu.Menu>
+  <Menu.Item name="Resume" as={Link} to="/resume" />
+</Menu.Menu>
+</Menu> */
 }
