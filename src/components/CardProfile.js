@@ -2,15 +2,14 @@ import React from "react";
 import ImageCircle from "../components/ImageCircle";
 import { Card, Container, Icon } from "semantic-ui-react";
 
-const imgSource =
-  "https://react.semantic-ui.com/images/wireframe/square-image.png";
+import me from "../assets/me.png";
 
 export default function CardProfile({ name, about, status }) {
   return (
     <Container textAlign="center">
       <Card fluid>
         <Card.Content>
-          <ImageCircle imgSource={imgSource} />
+          <ImageCircle imgSource={me} />
           <Card.Header>{name}</Card.Header>
           <Card.Meta>{about}</Card.Meta>
           <Card.Description>{status}</Card.Description>
