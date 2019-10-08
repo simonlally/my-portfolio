@@ -3,6 +3,7 @@ import { Card, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import "semantic-ui-css/semantic.min.css";
+import "./ProjectCardStyle.css";
 
 const imgSrc =
   "https://holoweb.net/~liam/pictures/r/1C/img_8179-path-to-beach-q100-500x200.jpg";
@@ -16,72 +17,74 @@ export default function ProjectCard({
   herokuLink
 }) {
   const [isHovered, setHovered] = useState(false);
+
   return (
     <Card
       fluid
-      className="ui container center aligned"
+      className="ui container center aligned card-container"
       onMouseOver={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      style={{ marginBottom: "100px" }}
     >
-      <Card.Content fluid header={name} />
-      {!isHovered ? (
-        <div className="ui image">
-          <img src={imgSrc} />
-        </div>
-      ) : (
-        <div className="ui image">
-          <img src={imgSrc} />
-          <div
-            style={{
-              backgroundColor: "grey",
-              position: "absolute",
-              color: "white",
-              bottom: 0,
-              height: "100%",
-              opacity: 0.8,
-              textAlign: "center",
-              display: "block",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%"
-            }}
-          >
-            <div style={{ paddingTop: "100px" }}>
-              <h1> {desc} </h1>
-            </div>
-            <div style={{ paddingTop: "20px" }}>
-              <h3> front end tech</h3>
-              <div>
-                {frontEndTech.map(x => (
-                  <Button
-                    style={{ marginLeft: "10px", marginRight: "10px" }}
-                    content={x}
-                  ></Button>
-                ))}
-              </div>
-            </div>
-            <div style={{ paddingTop: "10px" }}>
-              <h3> back end tech </h3>
-              <div>
-                {backEndTech.map(x => (
-                  <Button
-                    style={{ marginLeft: "10px", marginRight: "10px" }}
-                    content={x}
-                  ></Button>
-                ))}
-              </div>
-            </div>
-            <div style={{ margin: "20px" }}>
-              <Button component={Link} to={githubLink}>
-                View me on github
-              </Button>
-              <Button component={Link} to={herokuLink}>
-                View me live on Heroku
-              </Button>
-            </div>
+      <Card.Content fluid header={name} className="card-content" />
+      <img
+        src={
+          isHovered
+            ? "https://blog.bannersnack.com/wp-content/uploads/2018/05/Animations-bannersnack.gif"
+            : imgSrc
+        }
+        style={{ height: "90%" }}
+      />
+      <div
+        className="ui image"
+        className={isHovered ? "overlay overlay-show" : "overlay"}
+      >
+        <h4> {desc} </h4>
+        <div style={{ paddingTop: "20px" }}>
+          <p> front end tech</p>
+          <div>
+            {frontEndTech.map(x => (
+              <Button
+                inverted
+                color="olive"
+                active
+                style={{
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  cursor: "default"
+                }}
+                content={x}
+              ></Button>
+            ))}
           </div>
         </div>
-      )}
+        <div style={{ marginTop: "10px" }}>
+          <p> back end tech </p>
+          <div>
+            {backEndTech.map(x => (
+              <Button
+                inverted
+                color="olive"
+                active
+                style={{
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  cursor: "default"
+                }}
+                content={x}
+              ></Button>
+            ))}
+          </div>
+        </div>
+        <div style={{ marginTop: "40px" }}>
+          <Button component={Link} to={githubLink}>
+            View me on github
+          </Button>
+          <Button component={Link} to={herokuLink}>
+            View me live on Heroku
+          </Button>
+        </div>
+      </div>
     </Card>
   );
 }
