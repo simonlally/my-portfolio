@@ -14,7 +14,8 @@ export default function ProjectCard({
   frontEndTech,
   backEndTech,
   githubLink,
-  herokuLink
+  herokuLink,
+  backgroundImage
 }) {
   const [isHovered, setHovered] = useState(false);
 
@@ -31,9 +32,9 @@ export default function ProjectCard({
         src={
           isHovered
             ? "https://blog.bannersnack.com/wp-content/uploads/2018/05/Animations-bannersnack.gif"
-            : imgSrc
+            : backgroundImage
         }
-        style={{ height: "90%" }}
+        style={{ height: "90%", objectFit: "cover" }}
       />
       <div
         className="ui image"

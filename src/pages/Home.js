@@ -3,6 +3,9 @@ import React from "react";
 import CardProfile from "../components/CardProfile";
 import ProjectCard from "../components/ProjectCard";
 
+import howler from "../assets/howler-background.png";
+import packageManagement from "../assets/packagems-background.png";
+
 const howlerFront = ["React", "Semantic-UI", "GraphQL"];
 const howlerBack = ["Node", "Express", "GraphQL", "Mongoose", "MongoDB"];
 
@@ -27,6 +30,7 @@ export default function Home() {
         backEndTech={howlerBack}
         githubLink={"https://github.com/simonlally/howler"}
         herokuLink={"https://github.com/simonlally/mongo-graphql/"}
+        backgroundImage={howler}
       />
       <ProjectCard
         name="Package Management System"
@@ -35,6 +39,7 @@ export default function Home() {
         backEndTech={pkgBack}
         githubLink={"https://github.com/simonlally/pkg-management-react"}
         herokuLink={"https://github.com/simonlally/pkg-management-firebase"}
+        backgroundImage={packageManagement}
       />
       <ProjectCard
         name="Combinations"
