@@ -61,7 +61,7 @@ export default function Home() {
       />
       <ProjectCard
         name="FODMAP Directory (iOS and Android)"
-        desc="Reference app for low FODMAP IBS"
+        desc="A mobile app for iOS and Android that served as a reference for users of the low FODMAP diet.  Users could easily scroll the content or search the app to check if a specific item may upset or aggravate their condition further."
         frontEndTech={fodmapFront}
         backEndTech={fodmapBack}
         backgroundImage={fodmap}

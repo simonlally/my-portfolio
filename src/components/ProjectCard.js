@@ -77,18 +77,20 @@ export default function ProjectCard({
             ))}
           </div>
         </div>
-        <div style={{ marginTop: "40px" }}>
-          <Button inverted style={{ marginRight: "10px" }}>
-            <a rel="noopener noreferrer" href={githubLink} target="_blank">
-              View me on github
-            </a>
-          </Button>
-          <Button inverted>
-            <a rel="noopener noreferrer" href={herokuLink} target="_blank">
-              Try me on Heroku
-            </a>
-          </Button>
-        </div>
+        {herokuLink && githubLink && (
+          <div style={{ marginTop: "40px" }}>
+            <Button inverted style={{ marginRight: "10px" }}>
+              <a rel="noopener noreferrer" href={githubLink} target="_blank">
+                View me on github
+              </a>
+            </Button>
+            <Button inverted>
+              <a rel="noopener noreferrer" href={herokuLink} target="_blank">
+                Try me on Heroku
+              </a>
+            </Button>
+          </div>
+        )}
       </div>
     </Card>
   );
