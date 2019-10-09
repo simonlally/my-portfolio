@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Card, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { Card, Button } from "semantic-ui-react";
 
 import "semantic-ui-css/semantic.min.css";
 import "./ProjectCardStyle.css";
@@ -27,7 +27,7 @@ export default function ProjectCard({
       onMouseLeave={() => setHovered(false)}
       style={{ marginBottom: "100px" }}
     >
-      <Card.Content fluid header={name} className="card-content" />
+      <Card.Content header={name} className="card-content" />
       <img
         src={
           isHovered
@@ -42,7 +42,7 @@ export default function ProjectCard({
       >
         <h4> {desc} </h4>
         <div style={{ paddingTop: "20px" }}>
-          <p> front end tech</p>
+          <p>Frontend Tech</p>
           <div>
             {frontEndTech.map(x => (
               <Button
@@ -60,7 +60,7 @@ export default function ProjectCard({
           </div>
         </div>
         <div style={{ marginTop: "10px" }}>
-          <p> back end tech </p>
+          <p>Backend Tech</p>
           <div>
             {backEndTech.map(x => (
               <Button
@@ -78,16 +78,15 @@ export default function ProjectCard({
           </div>
         </div>
         <div style={{ marginTop: "40px" }}>
-          <Button
-            inverted
-            component={Link}
-            to={githubLink}
-            style={{ marginRight: "10px" }}
-          >
-            View me on github
+          <Button inverted style={{ marginRight: "10px" }}>
+            <a rel="noopener noreferrer" href={githubLink} target="_blank">
+              View me on github
+            </a>
           </Button>
-          <Button inverted component={Link} to={herokuLink}>
-            View me live on Heroku
+          <Button inverted>
+            <a rel="noopener noreferrer" href={herokuLink} target="_blank">
+              Try me on Heroku
+            </a>
           </Button>
         </div>
       </div>

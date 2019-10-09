@@ -1,8 +1,8 @@
 import React from "react";
 import ImageCircle from "../components/ImageCircle";
-import { Card, Container, Icon } from "semantic-ui-react";
+import { Card, Container } from "semantic-ui-react";
 
-import me from "../assets/me1.png";
+import me from "../assets/me.jpeg";
 import background from "../assets/backgroundskyblue.jpg";
 
 export default function CardProfile({ name, about, status }) {
@@ -13,11 +13,12 @@ export default function CardProfile({ name, about, status }) {
         style={{
           backgroundImage: `url(${background})`,
           backgroundSize: "cover",
-          backgroundPosition: "bottom"
+          backgroundPosition: "bottom",
+          padding: "50px"
         }}
       >
         <Card.Content>
-          <ImageCircle imgSource={me} style={{ marginBottom: "20px" }} />
+          <ImageCircle imgSource={me} style={{ marginBottom: "50px" }} />
           <Card.Header style={{ color: "white" }}>{name}</Card.Header>
           <Card.Meta style={{ color: "white" }}>
             <strong>{about}</strong>
@@ -33,6 +34,7 @@ export default function CardProfile({ name, about, status }) {
               <a
                 href="https://www.quora.com/What-is-meant-by-btw-I-use-arch"
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "coral" }}
               >
                 &nbsp;(I use Arch btw).&nbsp;
@@ -43,11 +45,6 @@ export default function CardProfile({ name, about, status }) {
           <Card.Description style={{ color: "white" }}>
             {status}
           </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <a>
-            <Icon name="github" />
-          </a>
         </Card.Content>
       </Card>
     </Container>

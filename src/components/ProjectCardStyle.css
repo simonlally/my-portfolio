@@ -21,6 +21,11 @@ body {
   height: 400px;
 }
 
+.card-container h4 {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .overlay {
   position: absolute;
   list-style: none;

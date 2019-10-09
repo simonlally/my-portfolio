@@ -5,7 +5,6 @@ import "./App.css";
 
 import MenuBar from "./components/MenuBar";
 import Home from "./pages/Home";
-import Resume from "./pages/Resume";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Router>
         <MenuBar />
         <Route exact path="/" component={Home} />
-        <Route exact path="/resume" component={Resume} />
       </Router>
     </Container>
   );
