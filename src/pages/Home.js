@@ -44,7 +44,7 @@ export default function Home() {
       />
       <ProjectCard
         name="Package Management System"
-        desc="All in one system to track incoming packages for frontdesk staff and building tenants.  Frontdesk staff may add packages and tenants may view those packages in real time."
+        desc="All in one system to track incoming packages for frontdesk staff and building tenants.  Frontdesk staff may add packages and tenants may view those packages in real time.  Credentials for staff and tenant can be found on the github link below!"
         frontEndTech={pkgFront}
         backEndTech={pkgBack}
         githubLink="https://github.com/simonlally/pkg-management-react"
