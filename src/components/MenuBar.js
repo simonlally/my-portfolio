@@ -4,9 +4,9 @@ import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 const menuItems = [
-  { key: "portfolio", name: "Portfolio" },
-  { key: "contact", name: "Contact" },
-  { key: "resume", name: "Resume" }
+  { key: "linkedIn", name: "LinkedIn" },
+  { key: "github", name: "Github" },
+  { key: "email", name: "Email Me" }
 ];
 
 export default function MenuBar() {

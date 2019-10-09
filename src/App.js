@@ -9,7 +9,7 @@ import Resume from "./pages/Resume";
 
 function App() {
   return (
-    <Container style={{ width: "60%" }}>
+    <Container style={{ width: "70%" }}>
       <Router>
         <MenuBar />
         <Route exact path="/" component={Home} />

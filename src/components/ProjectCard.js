@@ -46,7 +46,7 @@ export default function ProjectCard({
             {frontEndTech.map(x => (
               <Button
                 inverted
-                color="olive"
+                color="blue"
                 active
                 style={{
                   marginLeft: "10px",
@@ -64,7 +64,7 @@ export default function ProjectCard({
             {backEndTech.map(x => (
               <Button
                 inverted
-                color="olive"
+                color="blue"
                 active
                 style={{
                   marginLeft: "10px",
@@ -77,10 +77,15 @@ export default function ProjectCard({
           </div>
         </div>
         <div style={{ marginTop: "40px" }}>
-          <Button component={Link} to={githubLink}>
+          <Button
+            inverted
+            component={Link}
+            to={githubLink}
+            style={{ marginRight: "10px" }}
+          >
             View me on github
           </Button>
-          <Button component={Link} to={herokuLink}>
+          <Button inverted component={Link} to={herokuLink}>
             View me live on Heroku
           </Button>
         </div>
