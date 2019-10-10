@@ -12,8 +12,8 @@ import combinationsGif from "../assets/combinationsGif.gif";
 
 import fodmap from "../assets/fodmapbanner.jpg";
 
-const howlerFront = ["React", "Semantic-UI", "Apollo"];
-const howlerBack = ["Node", "Express", "GraphQL", "Mongoose", "MongoDB"];
+const howlerFront = ["React", "Semantic-UI", "Apollo GraphQL"];
+const howlerBack = ["Node", "Express", "Apollo GraphQL", "Mongoose", "MongoDB"];
 
 const pkgFront = ["React", "Material-UI", "Firebase Functions"];
 const pkgBack = [
