@@ -12,13 +12,14 @@ code {
     monospace;
 }
 
-/* project overlay */
 body {
   background-color: "#f7fcff";
 }
 
+/* project overlay */
 .card-container {
-  height: 400px;
+  height: 80vh;
+  min-height: 420px;
 }
 
 .card-container h4 {
@@ -46,7 +47,7 @@ body {
   visibility: visible;
   opacity: 1;
   animation: fade 1s;
-  background-color: rgba(92, 91, 87, 0.7);
+  background-color: rgba(6, 14, 13, 0.6);
 }
 
 @keyframes fade {
@@ -56,5 +57,20 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+.small-footnote {
+  margin-top: 40px;
+}
+/* tablet and desktop display*/
+@media only screen and (min-width: 961px) {
+  .card-container {
+    height: 70vh;
+  }
+
+  .small-footnote {
+    width: 60%;
+    margin: 40px auto;
   }
 }

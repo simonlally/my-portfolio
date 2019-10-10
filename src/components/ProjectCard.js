@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Card, Button } from "semantic-ui-react";
+import { Card, Button, Icon } from "semantic-ui-react";
 
 import "semantic-ui-css/semantic.min.css";
 import "./ProjectCardStyle.css";
-
-const imgSrc =
-  "https://holoweb.net/~liam/pictures/r/1C/img_8179-path-to-beach-q100-500x200.jpg";
 
 export default function ProjectCard({
   name,
@@ -15,7 +11,8 @@ export default function ProjectCard({
   backEndTech,
   githubLink,
   herokuLink,
-  backgroundImage
+  backgroundImage,
+  hoverImage
 }) {
   const [isHovered, setHovered] = useState(false);
 
@@ -29,11 +26,7 @@ export default function ProjectCard({
     >
       <Card.Content header={name} className="card-content" />
       <img
-        src={
-          isHovered
-            ? "https://blog.bannersnack.com/wp-content/uploads/2018/05/Animations-bannersnack.gif"
-            : backgroundImage
-        }
+        src={isHovered ? hoverImage : backgroundImage}
         style={{ height: "90%", objectFit: "cover" }}
       />
       <div
@@ -52,6 +45,7 @@ export default function ProjectCard({
                 style={{
                   marginLeft: "10px",
                   marginRight: "10px",
+                  marginBottom: "10px",
                   cursor: "default"
                 }}
                 content={x}
@@ -70,6 +64,7 @@ export default function ProjectCard({
                 style={{
                   marginLeft: "10px",
                   marginRight: "10px",
+                  marginBottom: "10px",
                   cursor: "default"
                 }}
                 content={x}
@@ -79,16 +74,20 @@ export default function ProjectCard({
         </div>
         {herokuLink && githubLink && (
           <div style={{ marginTop: "40px" }}>
-            <Button inverted style={{ marginRight: "10px" }}>
+            <Button inverted active style={{ marginRight: "10px" }}>
               <a rel="noopener noreferrer" href={githubLink} target="_blank">
-                View me on github
+                View me on Github <Icon name="external alternate"></Icon>
               </a>
             </Button>
-            <Button inverted>
+            <Button inverted active>
               <a rel="noopener noreferrer" href={herokuLink} target="_blank">
-                Try me on Heroku
+                Try me on Heroku <Icon name="external alternate"></Icon>
               </a>
             </Button>
+            <p className="small-footnote">
+              * It may take a minute for the page to load on Heroku. If you
+              experience any issues, please try refreshing the page.
+            </p>
           </div>
         )}
       </div>

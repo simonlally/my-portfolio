@@ -4,7 +4,11 @@ import CardProfile from "../components/CardProfile";
 import ProjectCard from "../components/ProjectCard";
 
 import howler from "../assets/howler-background.png";
+import howlerGif from "../assets/howler.gif";
 import packageManagement from "../assets/packagems-background.png";
+import packageManagementGif from "../assets/packagems.gif";
+import combinations from "../assets/combinations.png";
+import combinationsGif from "../assets/combinationsGif.gif";
 
 import fodmap from "../assets/fodmapbanner.jpg";
 
@@ -41,6 +45,7 @@ export default function Home() {
         githubLink="https://github.com/simonlally/howler"
         herokuLink="https://howler-react.herokuapp.com/"
         backgroundImage={howler}
+        hoverImage={howlerGif}
       />
       <ProjectCard
         name="Package Management System"
@@ -50,14 +55,17 @@ export default function Home() {
         githubLink="https://github.com/simonlally/pkg-management-react"
         herokuLink="https://package-management-system.herokuapp.com/"
         backgroundImage={packageManagement}
+        hoverImage={packageManagementGif}
       />
       <ProjectCard
         name="Combinations"
-        desc="Outputs a list of all disctinct currency combinations that make up a target value when given the name of each denomination and the number required of that denomation to reach a target sum.  For example: given four types of currency: quarters, dimes, nickels and pennies and how the quantity of each denomination that equals the target value of $1. This input will print all coin combinations equalling up to the $1 target"
+        desc="Outputs a list of all disctinct currency combinations that make up a target value when given the denominations and the number required of that denomation to reach a target sum.  ie: given four types of currency (quarters, dimes, nickels and pennies) and their denominations and target sum, this outputs all coin combinations equalling up to the $1 target"
         frontEndTech={combFront}
         backEndTech={combBack}
         githubLink="https://github.com/simonlally/combinations"
         herokuLink="https://combinations.herokuapp.com"
+        backgroundImage={combinations}
+        hoverImage={combinationsGif}
       />
       <ProjectCard
         name="FODMAP Directory (iOS and Android)"
@@ -65,6 +73,7 @@ export default function Home() {
         frontEndTech={fodmapFront}
         backEndTech={fodmapBack}
         backgroundImage={fodmap}
+        hoverImage={fodmap}
       />
     </div>
   );
