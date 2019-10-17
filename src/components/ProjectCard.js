@@ -26,13 +26,11 @@ export default function ProjectCard({
     >
       <Card.Content header={name} className="card-content" />
       <img
+        alt=""
         src={isHovered ? hoverImage : backgroundImage}
         style={{ height: "90%", objectFit: "cover" }}
       />
-      <div
-        className="ui image"
-        className={isHovered ? "overlay overlay-show" : "overlay"}
-      >
+      <div className={isHovered ? "overlay overlay-show" : "overlay"}>
         <h4> {desc} </h4>
         <div style={{ paddingTop: "20px" }}>
           <p>Frontend Tech</p>
