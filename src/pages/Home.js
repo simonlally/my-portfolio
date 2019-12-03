@@ -35,7 +35,7 @@ export default function Home() {
       <CardProfile
         name="Simon Lally"
         about="Full Stack Developer"
-        status="I'm Hirable!"
+        status="I'm hireable!"
       />
       <ProjectCard
         name="Howler"
