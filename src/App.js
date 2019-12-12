@@ -5,13 +5,13 @@ import "./App.css";
 
 import MenuBar from "./components/MenuBar";
 import Home from "./pages/Home";
-import ReactGA from "react-ga";
+import { PageView, initGA } from "./tracking/index";
 
 function App() {
-  ReactGA.initialize(process.env.REACT_APP_API_KEY_GA);
+  initGA(process.env.REACT_APP_API_KEY_GA);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    PageView();
   });
 
   return (
