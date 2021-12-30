@@ -15,12 +15,10 @@ function App() {
   });
 
   return (
-    <Container style={{ width: "70%" }}>
-      <Router>
-        <MenuBar />
-        <Route exact path="/" component={Home} />
-      </Router>
-    </Container>
+    <Router>
+      {/* <MenuBar /> */}
+      <Route exact path='/' component={Home} />
+    </Router>
   );
 }
 

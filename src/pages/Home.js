@@ -20,7 +20,7 @@ const pkgBack = [
   "Node",
   "Express",
   "Serverless API",
-  "Firebase NoSQL Database"
+  "Firebase NoSQL Database",
 ];
 
 const combFront = ["Vue"];
@@ -31,8 +31,16 @@ const fodmapBack = ["Swift", "Xcode", "iOS SDK"];
 
 export default function Home() {
   return (
-    <div>
-      <CardProfile
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "80vh",
+      }}>
+      hi, this site is currently under construction.
+      {/* <CardProfile
         name="Simon Lally"
         about="Full Stack Developer"
         status="I'm hireable!"
@@ -74,7 +82,7 @@ export default function Home() {
         backEndTech={fodmapBack}
         backgroundImage={fodmap}
         hoverImage={fodmap}
-      />
+      /> */}
     </div>
   );
 }
